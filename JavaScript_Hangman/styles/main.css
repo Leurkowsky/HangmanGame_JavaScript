@@ -1,0 +1,194 @@
+@font-face {
+	font-family: Wisielec;
+	src: url(../Apropal-Bold.ttf)
+}
+
+@font-face{
+    font-family: Jaapokki-Regular;
+    src: url(../Jaapokki-Regular.otf);
+}
+
+body{
+    font-family: Jaapokki-Regular;
+    margin: 0;
+    padding: 0;
+    background: url('../images/bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #eee;
+}
+
+main{
+    margin: 50px 0;
+}
+
+section,
+.player1__gameplay{
+    display: none;
+}
+
+.section__mainmenu{
+    display: block;
+}
+
+select[name="kategorie"],
+select[name="trudnosc"]{
+    display: block;
+    margin: auto;
+    min-width: 180px;
+    height: 50px;
+    padding: 0 20px;
+    margin-bottom: 20px;
+}
+
+.menu__title{
+    text-align: center;
+    font-family: Wisielec;
+}
+
+h1.menu__title{
+    font-size: 80px;
+    margin-top: 90px;
+}
+
+a.menu__title{
+    font-size: 32px;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+    user-select: none;
+}
+
+.menu--container{
+    margin-top: 30px;
+    position: absolute;
+    top: calc(50% - 86px);
+    left: 0;
+    right: 0;
+}
+
+/*==== BUTTONS ====*/
+
+.btn--container:not(:first-child){
+    margin-top: 10px;
+}
+
+a.btn--menu{
+    display: inline-block;
+    width: 300px;
+    font-size: 32px;
+    font-weight: normal;
+}
+
+a.btn--summary{
+    display: inline-block;
+    width: 300px;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+a.btn--summary:hover,
+a.btn--menu:hover{
+    color: #333 !important;
+}
+
+.btn--standard{
+    all: unset;
+    display: block;
+    min-width: 150px;
+    padding: 15px 25px;
+    cursor: pointer;
+    border: 2px solid #eee;
+    background-color: #222;
+    text-transform: uppercase;
+    text-align: center;
+    transition: 0.3s ease all;
+    font-weight: bold;
+    margin: auto;
+}
+
+.btn--standard:hover,
+.game__alphabet button:hover{
+    background-color: white;
+    color: #333;
+}
+
+.game__alphabet button[data-clicked="true"]{
+    opacity: 0.1;
+}
+
+/*== END BUTTONS ==*/
+
+/*==== GAME ====*/
+.game__image{
+    min-height: 330px;
+    width: 376px;
+    margin: auto;
+    background-size: 100% 100%;
+}
+
+.game__word{
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-size: 24px;
+    letter-spacing: 10px;
+}
+
+.game__word .word{
+    display: inline-block;
+    margin-left: 5px;
+    margin-right: 5px;
+    text-align: center;
+    border-bottom: 2px solid #eee;
+    width: 50px;
+    padding-left: 10px;
+    user-select: none;
+    cursor: default;
+}
+
+.game__alphabet{
+    width: 800px;
+    margin: auto;
+    text-align: center;
+}
+
+.game__alphabet button{
+    all: unset;
+    border: 2px solid #eee;
+    padding: 3px 5px;
+    width: 25px;
+    margin: 3px;
+    background-color: #444;
+    text-align: center;
+    font-weight: bold;
+    transition: 0.3s ease all;
+    cursor: pointer;
+}
+
+/*== END GAME ==*/
+
+
+/*== SUMMARY ==*/
+
+.summary__win {
+    color: green;
+}
+.summary__lose { 
+    color: red;
+}
+
+.summary__container{
+    width: 500px;
+    margin: auto;
+    margin: 40px auto; 
+}
+
+/*== END SUMMARY ==*/
+
+select{
+    background-color: #222;
+    color: white;
+    border: 2px solid #fff;
+    border-radius: 25px;
+}

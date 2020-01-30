@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Wisielec - Projekt zaliczeniowy</title>
+        <link rel="stylesheet" type="text/css" href="styles/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="styles/main.css" />
+        <!--
+            Projekt zaliczeniowy
+            Autorzy:
+            => Łukasz Fujarski
+            => Wojciech Graf
+            => Patryk Gajek
+        -->
+    </head>
+    <body>
+        <main>
+            <section class="section__mainmenu">
+                <h1 class="menu__title">Wisielec</h1>
+                <div class="menu--container">
+                    <div class="btn--container text-center">
+                        <a class="btn--menu btn--standard" data-section="1-player">GRAJ</a>
+                    </div>
+                    <div class="btn--container text-center">
+                        <a class="btn--menu btn--standard" data-section="settings">USTAWIENIA</a>
+                    </div>
+                </div>
+            </section>
+            <section class="section__1-player">
+                <div class="player1__start">
+                    <h1 class="menu__title">Wisielec</h1></br>
+                    <h2 class="menu__title">Kategoria:</h2>
+                    <select name="kategorie"></select>
+                    <h2 class="menu__title">Poziom trudności:</h2>
+                    <select name="trudnosc"></select>
+                    <button class="btn--standard" onClick="startGame();">Rozpocznij grę</button>
+                </div>
+                <div class="player1__gameplay">
+                    <h2 class="menu__title" id="categoryname"></h2>
+                    <div class="game__image"></div>
+                    <div class="game__word"></div>
+                    <div class="game__alphabet"></div>
+                </div>
+            </section>
+            
+            <section class="section__summary">
+                <h1 class="menu__title">Podsumownie</h1>
+                <div class="summary__container">
+                    <h2>Kategoria: <span class="summary__category"></span></h2>
+                    <h2>Słowo: <span class="summary__word"></span></h2>
+                    <h2>Wygrane: <span class="summary__win"></span></h2>
+                    <h2>Przegrane: <span class="summary__lose"></span></h2>
+                </div>
+                <div class="text-center" style="margin-top: 25px;">
+                    <a class="btn--summary btn--standard" data-section="1-player">ZAGRAJ PONOWNIE</a>
+                </div>
+            </section>
+            <section class="section__settings">
+                <h1 class="menu__title">Ustawienia</h1>
+                <p class="text-center" style="font-size: 32px;">
+                    <input type="checkbox" class="settings__audio" id="dzwiek" checked/> 
+                    <label for="dzwiek" style="cursor: pointer; user-select: none;">Dźwięk</label>
+                </p>
+                <a class="menu__title" data-section="mainmenu">Powrót</a>
+            </section>
+        </main>
+        <script src="js/jquery-3.4.1.min.js" /></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
